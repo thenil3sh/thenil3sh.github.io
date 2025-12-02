@@ -1,155 +1,29 @@
 <!DOCTYPE html>
 <html>
 
-
-<style>
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .tooltip .tooltip-text {
-        visibility: hidden;
-        width: 450px;
-        background-color: rgba(235, 219, 178, 0.7);
-        color: #3c3836;
-        text-align: center;
-        font-size: 15px;
-        border-radius: 10px;
-        padding: 5px;
-        font-family: "Light";
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(5px);
-
-        /* Position the tooltip */
-        position: absolute;
-        bottom: 0%;
-        /* Position above the element */
-        left: 0%;
-        transform: translateX(-50%);
-        z-index: 1;
-
-        /* Fade-in effect */
-        opacity: 0;
-        transition: opacity 0.4s;
-
-
-    }
-
-    .tooltip:hover .tooltip-text {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    @font-face {
-        font-family: "Thick";
-        src: url("./style/JetBrainsMono-ExtraBold.ttf");
-    }
-
-    @font-face {
-        font-family: "Bold";
-        src: url("./style/JetBrainsMono-Bold.ttf") format("truetype");
-    }
-
-    @font-face {
-        font-family: "Light";
-        src: url("./style/JetBrainsMono-Light.ttf") format("truetype");
-    }
-
-    @font-face {
-        font-family: "Medium";
-        src: url("./style/JetBrainsMono-Medium.ttf");
-    }
-
-    @font-face {
-        font-family: "Regular";
-        src: url("./style/JetBrainsMonoNL-Regular.ttf");
-    }
-
-    @font-face {
-        font-family: "Thin";
-        src: url("./style/JetBrainsMono-Thin.ttf");
-    }
-
-    h2,
-    h3 {
-        font-family: "Bold";
-    }
-
-    h4 {
-        font-family: "Medium";
-        padding: 20px;
-    }
-
-    h5 {
-        font-family: "Light";
-    }
-
-    h1 {
-        font-family: "Bold";
-    }
-
-    h6 {
-        font-family: "Thin";
-    }
-
-    body {
-        width: device-width;
-        background-color: #fbf1c7;
-        color: #3c3836;
-        transition: background-color 0.3s, color 0.3s;
-        padding: 20px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: #282828;
-            color: #f9f5d7;
-        }
-    }
-
-    [data-theme="dark"] {
-        background-color: #282828;
-        color: #f9f5d7;
-
-    }
-
-    [data-theme="light"] {
-        background-color: #282828;
-        color: #32302f;
-    }
-</style>
-
 <head>
-    <meta charset="UTF-8">
-    <title>@thenil3sh</title>
-    <link rel="icon" href="./style/favicon.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
+  <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
+  <link rel="stylesheet" href="/styles-a9b73f4e28f29c32.css" integrity="sha384-xXdS54wvlamacxuNvtWXhRSUhy4EZ8Xqyi4clLcf7bfvom5YFgJVufHZabFOx4D/"/>
 
-<body>
-    <center>
-        <div style="width : 425px" display="inline-block">
-            <div font-family="Medium" style="font-size:41px;">you, there! thanks for visiting! you're looking <div style="font-size:70px; font-family:Thick; display:inline-block;" >@thenil3sh</div>'s profile page right now</div><div>. . .</div>
-            <div class="tooltip">
-                <h5>looks awful, ikr</h5>
-                <div class="tooltip-text">also proves, that I suck at webdev? well, true! <b>:D</b></div>
-            </div>
-            <h2>rn, im rooting into webassembly with Rust, so, this page still has better days to see
-            </h2>
-            <h4> Here's a project I built in Rust, and it's executable in your browser 'cause of webassembly </h4>
-        </div>
-        <canvas id="canvas"></canvas>
-        <script type="module">
-            // import the generated file.
-            import init from "./pkg/calc.js";
-            init();
-        </script>
-        <div>
-            <h3>This will take long but won't take forever!! hoping that you visit again :D, you will, right?</h3>
-        </div>
-    </center>
-</body>
+  <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
+  <link rel="icon" href="/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
+
+  <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+  
+<script type="module">
+import init, * as bindings from '/something-1457b82c9501909d.js';
+const wasm = await init({ module_or_path: '/something-1457b82c9501909d_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+<link rel="modulepreload" href="/something-1457b82c9501909d.js" crossorigin="anonymous" integrity="sha384-DR064JM+aBBfcTi0RhIGqUVJStzY2lgexBjRDVKOgWhbLPZxPQ6psSrch8Kqryc0"><link rel="preload" href="/something-1457b82c9501909d_bg.wasm" crossorigin="anonymous" integrity="sha384-4d/6ta2GUpmSsOgiLNkmIxGmVe3HpkAKSQAyD5acNqxOI8jOVEYHcDovvTgCC2ha" as="fetch" type="application/wasm"></head>
+
+<body></body>
 
 </html>
