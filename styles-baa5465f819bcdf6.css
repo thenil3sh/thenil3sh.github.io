@@ -1,0 +1,86 @@
+/* --------------------- Open Props --------------------------- */
+/* the props */
+@import "https://unpkg.com/open-props";
+/* optional imports that use the props */
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+@import "https://fonts.googleapis.com/css?family=Pixelify Sans";
+@import "https://fonts.googleapis.com/css?family=DM Sans";
+@import "https://fonts.googleapis.com/css?family=DM Serif Display";
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+@import "https://fonts.googleapis.com/css?family=Limelight";
+@import "https://fonts.googleapis.com/css?family=Doto";
+/* ------------------------------------------------------------ */
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Pixelify Sans";
+  padding: 2rem;
+  align-self: center;
+  white-space: pre;
+  justify-self: center;
+  position: relative;
+  transition: 250ms;
+}
+
+.pixelify-sans {
+  font-family: "Pixelify Sans";
+}
+
+.dm-serif-display {
+  font-family: "DM Serif Display";
+}
+
+.dm-sans {
+  font-family: "DM Sans";
+}
+
+.doto {
+  font-family: "Limelight";
+}
+
+.montserrat {
+  font-family: "Montserrat";
+}
+
+.jetbrains-mono {
+  font-family: "JetBrains Mono";
+}
+
+p,
+button {
+  margin: var(--size-6);
+}
+
+body > picture,
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin: 2rem;
+}

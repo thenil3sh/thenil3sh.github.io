@@ -4,7 +4,7 @@
 <head>
   <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
   <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
-  <link rel="stylesheet" href="/styles-a9b73f4e28f29c32.css" integrity="sha384-xXdS54wvlamacxuNvtWXhRSUhy4EZ8Xqyi4clLcf7bfvom5YFgJVufHZabFOx4D/"/>
+  <link rel="stylesheet" href="/styles-baa5465f819bcdf6.css" integrity="sha384-n/myOE7BgDDurXsAHfSoe8vAQRTjtw4fKcP0nEOp1iq1GClo5TiUdIu1oBQrN/bp"/>
 
   <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
   <link rel="icon" href="/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
@@ -12,8 +12,8 @@
   <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
   
 <script type="module">
-import init, * as bindings from '/something-1457b82c9501909d.js';
-const wasm = await init({ module_or_path: '/something-1457b82c9501909d_bg.wasm' });
+import init, * as bindings from '/something-ef42bc2ccacb2af7.js';
+const wasm = await init({ module_or_path: '/something-ef42bc2ccacb2af7_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -22,7 +22,7 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-<link rel="modulepreload" href="/something-1457b82c9501909d.js" crossorigin="anonymous" integrity="sha384-DR064JM+aBBfcTi0RhIGqUVJStzY2lgexBjRDVKOgWhbLPZxPQ6psSrch8Kqryc0"><link rel="preload" href="/something-1457b82c9501909d_bg.wasm" crossorigin="anonymous" integrity="sha384-4d/6ta2GUpmSsOgiLNkmIxGmVe3HpkAKSQAyD5acNqxOI8jOVEYHcDovvTgCC2ha" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/something-ef42bc2ccacb2af7.js" crossorigin="anonymous" integrity="sha384-70KDPl2rz4cVdQctnKNep7p2236vK41MbCZXxGxoJj31fFu8FhS8yN/hRn0fwMhK"><link rel="preload" href="/something-ef42bc2ccacb2af7_bg.wasm" crossorigin="anonymous" integrity="sha384-Cf/Vtg9VqwEXnddOJl6F6bkyUCOqUTmlvqLUl1YSPMWw8Wjn/447iE3TmFwgekwQ" as="fetch" type="application/wasm"></head>
 
 <body></body>
 
