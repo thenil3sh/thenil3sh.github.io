@@ -23,8 +23,8 @@ jobs:
       - name: Install Trunk
         run: cargo install trunk
 
-      - name: Build Leptos
-        run: trunk build --release
+      - name: Build
+        run: trunk build --release --public-url /${{ github.event.repository.name }}/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
