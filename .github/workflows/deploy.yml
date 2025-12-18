@@ -26,8 +26,7 @@ jobs:
       - name: Build
         run: trunk build --release --public-url /${{ github.event.repository.name }}/
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          path: dist
