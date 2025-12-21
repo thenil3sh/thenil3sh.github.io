@@ -147,7 +147,10 @@ nav .right {
 }
 
 nav {
-    padding: 0 100px;
+    margin : auto;
+    align-self: center;
+    padding : 0 50px;
+    max-width: 700px;
     position: sticky;
     display: flex;
     justify-content: space-between;
@@ -184,11 +187,12 @@ nav label input {
 main {
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: 100%;
+    width : 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    // width: 100vw;
 }
 
 .container {
