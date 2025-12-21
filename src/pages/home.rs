@@ -81,7 +81,7 @@ pub fn Home() -> impl IntoView {
             </nav>
             <main>
                 <div class="container">
-                    <WavyContent text="under construction..." />
+                    <WavyText text="under construction..." />
                 </div>
             </main>
         </ErrorBoundary>
@@ -89,7 +89,10 @@ pub fn Home() -> impl IntoView {
 }
 
 #[component]
-fn WavyContent (text : &'static str) -> impl IntoView {
+fn WavyText (
+    #[prop(default = "")]
+    text : &'static str
+) -> impl IntoView {
     text.char_indices().map(|(index, char)| {
         view! { <span style=format!("--i:{index}")>{char}</span> }
     }).collect_view()
