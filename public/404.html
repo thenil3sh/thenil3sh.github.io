@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What</title>
+
+    <link rel="icon" href="/favicon.ico"/>
+
+    <style>
+        body, main {
+            margin : 0;
+            width : 100vw;
+            height : 100vh;
+            overflow: hidden;
+        }
+        :root {
+
+            background-color: #faf4ed;
+            color: #575279;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: #191724;
+                color: #e0def4;
+            }
+        }
+
+        @font-face {
+            font-family: "Roboto Flex";
+            src: url("Roboto.woff2") format("woff2-variations");
+            font-weight: 100 1000;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @property --wdth {
+            syntax: "<number>";
+            inherits: true;
+            initial-value: 10;
+        }
+
+        @property --wght {
+            syntax: "<number>";
+            inherits: true;
+            initial-value: 900;
+        }
+
+        @property --opsz {
+            syntax: "<number>";
+            inherits: true;
+            initial-value: 20;
+        }
+
+        * {
+            font-family: 'Roboto Flex';
+            /* font-weight: 900; */
+            font-variation-settings:
+                "wght" var(--wght),
+                "wdth" var(--wdth),
+                "slnt" 0,
+                "ital" 0,
+                "opsz" var(--opsz);
+        }
+
+        .zero {
+            --wght: 10;
+            --opsz: 144;
+            animation: animate-zero 10s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+        }
+
+
+        .fourOfour {
+            animation: scroll 10s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translateX(calc(-100%));
+            }
+        }
+
+        @keyframes animate-zero {
+
+            15%,
+            50% {
+                --wght: 200;
+                --wdth: 75;
+                --opsz: 120;
+
+            }
+
+            65%,
+            100%,
+            0% {
+                --wght: 1000;
+                --wdth: 150;
+                --opsz: 155;
+                font-size: 250px;
+            }
+        }
+
+        .four {
+            animation: animate-four 10s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+        }
+
+        @keyframes animate-four {
+
+            65%,
+            100%,
+            0% {
+                --wght: 400;
+                --wdth: 75;
+                --opsz: 120;
+            }
+
+            15%,
+            50% {
+                --wght: 1000;
+                --wdth: 500;
+                --opsz: 155;
+                font-size: 250px;
+            }
+        }
+
+        .not-found {
+            animation : not-found 10s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+            font-size : 30px;
+        }
+
+
+        @keyframes not-found {
+
+            65%,
+            100%,
+            0% {
+                --wght: 300;
+                --wdth: 50;
+                --opsz: 144;
+                letter-spacing : 20px;
+            }
+
+            15%,
+            50% {
+                --wght: 1000;
+                --wdth: 200;
+                --opsz: 155;
+                letter-spacing : 2px;
+            }
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .column {
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .big {
+            font-size: 250px;
+            /* font-weight: 900; */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="fourOfour">
+            <div class="column">
+                <div class="row">
+                    <div class="big four">4</div>
+                    <div class="big zero">0</div>
+                    <div class="big four">4</div>
+                </div>
+                <span class="not-found">NOT FOUND</span>
+            </div>
+        </div>
+        <div class="fourOfour">
+            <div class="column">
+                <div class="row">
+                    <div class="big four">4</div>
+                    <div class="big zero">0</div>
+                    <div class="big four">4</div>
+                </div>
+                <span class="not-found">NOT FOUND</span>
+            </div>
+        </div>
+        <div class="fourOfour">
+            <div class="column">
+                <div class="row">
+                    <div class="big four">4</div>
+                    <div class="big zero">0</div>
+                    <div class="big four">4</div>
+                </div>
+                <span class="not-found">NOT FOUND</span>
+            </div>
+        </div>
+        <div class="fourOfour">
+            <div class="column">
+                <div class="row">
+                    <div class="big four">4</div>
+                    <div class="big zero">0</div>
+                    <div class="big four">4</div>
+                </div>
+                <span class="not-found">NOT FOUND</span>
+            </div>
+        </div>
+        <div class="fourOfour">
+            <div class="column">
+                <div class="row">
+                    <div class="big four">4</div>
+                    <div class="big zero">0</div>
+                    <div class="big four">4</div>
+                </div>
+                <span class="not-found">NOT FOUND</span>
+            </div>
+        </div>
+        <div class="fourOfour">
+            <div class="column">
+                <div class="row">
+                    <div class="big four">4</div>
+                    <div class="big zero">0</div>
+                    <div class="big four">4</div>
+                </div>
+                <span class="not-found">NOT FOUND</span>
+            </div>
+        </div>
+        <div class="fourOfour">
+            <div class="column">
+                <div class="row">
+                    <div class="big four">4</div>
+                    <div class="big zero">0</div>
+                    <div class="big four">4</div>
+                </div>
+                <span class="not-found">NOT FOUND</span>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
