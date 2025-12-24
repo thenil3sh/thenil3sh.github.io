@@ -10,7 +10,7 @@ dist = "dist"
 # The public URL from which assets are to be served.
 public_url = "/"
 # Whether to include hash values in the output file names.
-filehash = true
+filehash = false
 # Whether to inject scripts (and module preloads) into the finalized output.
 inject_scripts = true
 # Run without network access
@@ -58,3 +58,7 @@ open = false
 # tls_cert_path = "self_signed_certs/cert.pem"
 # Additional headers to send. NOTE: header names must be valid HTTP headers.
 # headers = { "X-Foo" = "bar" }
+
+[[copy]]
+source = "public/404.html"
+dest = "404.html"
