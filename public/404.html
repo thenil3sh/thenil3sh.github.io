@@ -53,7 +53,7 @@
         }
 
         * {
-            font-family: 'Roboto Flex';
+            font-family: 'Roboto Flex', 'Roboto';
             /* font-weight: 900; */
             font-variation-settings:
                 "wght" var(--wght),
@@ -97,7 +97,6 @@
                 --wght: 1000;
                 --wdth: 150;
                 --opsz: 155;
-                font-size: 250px;
             }
         }
 
@@ -120,7 +119,6 @@
                 --wght: 1000;
                 --wdth: 500;
                 --opsz: 155;
-                font-size: 250px;
             }
         }
 
@@ -169,9 +167,16 @@
 
         .big {
             font-size: 250px;
-            /* font-weight: 900; */
         }
-    </style>
+        @media screen and (max-width : 768px) {
+            .big {
+                font-size : 175px;
+            }
+            .hideOnSmall {
+                display : none;
+            }
+        }
+        </style>
 </head>
 
 <body>
@@ -216,7 +221,7 @@
                 <span class="not-found">NOT FOUND</span>
             </div>
         </div>
-        <div class="fourOfour">
+        <div class="fourOfour hideOnSmall">
             <div class="column">
                 <div class="row">
                     <div class="big four">4</div>
@@ -226,7 +231,7 @@
                 <span class="not-found">NOT FOUND</span>
             </div>
         </div>
-        <div class="fourOfour">
+        <div class="fourOfour hideOnSmall">
             <div class="column">
                 <div class="row">
                     <div class="big four">4</div>
@@ -236,7 +241,7 @@
                 <span class="not-found">NOT FOUND</span>
             </div>
         </div>
-        <div class="fourOfour">
+        <div class="fourOfour hideOnSmall">
             <div class="column">
                 <div class="row">
                     <div class="big four">4</div>
