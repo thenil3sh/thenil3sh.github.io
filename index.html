@@ -2,15 +2,22 @@
 <html>
 
 <head>
-  <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
-  <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="thenil3sh">
+  <meta property="og:description" content="This is Nilesh's ...">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thenil3sh.github.io">
+  <meta property="og:image"
+    content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.imyfone.com%2Ffilme%2Fassets%2Farticle%2Fatatus-image-to-url-converter-guide1.jpeg&f=1&nofb=1&ipt=f3dfb25a10c175b096558ae4b9fc0da8fe198bc5b7b7202b76c24ab37454477e">
+  <title>thenil3sh</title>
+
   <link data-trunk rel="scss" href="public/styles.scss" />
-
   <link data-trunk rel="copy-dir" href="public" />
-  <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
   <link data-trunk rel="icon" href="public/favicon.ico" />
-
-  <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
   <link data-trunk rel="rust" data-wasm-opt="z" data-weak-refs />
 </head>
 
