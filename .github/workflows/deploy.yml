@@ -47,7 +47,7 @@ jobs:
 
       - name: Move static files
         run: |
-          cp dist/public/404.html dist/404.html && cp dist/public/Roboto.woff2 dist/Roboto.woff2
+          mv dist/public/404.html dist/404.html
 
       # Upload artefacts and publish
       - name: Upload Pages artifact

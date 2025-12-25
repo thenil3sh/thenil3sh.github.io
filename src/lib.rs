@@ -2,8 +2,6 @@ use leptos::prelude::*;
 use leptos_meta::*;
 use leptos_router::{components::*, path};
 
-// Modules
-mod components;
 mod pages;
 
 // Top-Level pages
