@@ -37,9 +37,11 @@ jobs:
       - name: Cache Rust
         uses: Swatinem/rust-cache@v2
 
-  
-      - name: Install Trunk
-        run: cargo install trunk
+      - name: Install cargo-binstall
+        uses: cargo-bins/cargo-binstall@main
+
+      - name: Install trunk
+        run: cargo-binstall trunk --no-confirm
         
       # --- Start Building ---
       - name: Build Leptos
