@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Sentient';
+    src: url('assets/fonts/Sentient-Variable.woff2') format('woff-variations'),
+         url('assets/fonts/Sentient-Variable.woff2') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sentient';
+    src: url('assets/fonts/Sentient-VariableItalic.woff2') format('woff-variations'),
+         url('assets/fonts/Sentient-VariableItalic.woff2') format('woff');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+:root {
+    /* Base & UI */
+    --ayu-bg: #FCFCFC;
+    --ayu-fg: #5C6166;
+    --ayu-fg-muted: #ABB0B6;
+    --ayu-ui-border: #E6E6E6;
+    --ayu-ui-hover: #F2F2F2;
+    --ayu-selection: rgba(3, 91, 214, 0.15);
+
+    /* Accent */
+    --ayu-accent: #FF9940;
+
+    /* Color Palette */
+    --ayu-red: #F07178;
+    --ayu-orange: #FA8D3E;
+    --ayu-yellow: #F2AE49;
+    --ayu-green: #86B300;
+    --ayu-cyan: #4CBF99;
+    --ayu-blue: #36A3D9;
+    --ayu-purple: #A37ACC;
+}
+
+
+/* .crimson-pro-font {
+    font-family: "Crimson Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Base & UI */
+        --ayu-bg: #0F1419;
+        --ayu-fg: #E6E1CF;
+        --ayu-fg-muted: #5C6773;
+        --ayu-ui-border: #253340;
+        --ayu-ui-hover: #171E26;
+        --ayu-selection: rgba(255, 255, 255, 0.1);
+
+        /* Accent */
+        --ayu-accent: #E6B450;
+
+        /* Color Palette */
+        --ayu-red: #EA6C73;
+        --ayu-orange: #FF8F40;
+        --ayu-yellow: #E6B450;
+        --ayu-green: #AAD94C;
+        --ayu-cyan: #95E6CB;
+        --ayu-blue: #39BAE6;
+        --ayu-purple: #D2A6FF;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    width: max;
+    text-align: left;
+}
+
+
+.center {
+    display: flex;
+
+    max-width: 700px;
+    align-items: start;
+
+    flex-direction: column;
+    padding: 50px;
+}
+
+.container {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+p {
+    font-weight: 350;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Sentient', serif;
+    font-weight: 100;
+    background-color: var(--ayu-bg);
+    color: var(--ayu-fg);
+}
+
+a {
+    color: var(--ayu-accent);
+    text-decoration: none;
+
+    display: inline-block;
+    position: relative;
+
+    transition: 300ms ease-out color;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--ayu-green);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover {
+    color: var(--ayu-green);
+    animation: 300ms ease-out;
+}
+
+a:hover::after {
+    color: var(--ayu-blue);
+    text-decoration: underline;
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+
+.button-row {
+    display: flex;
+
+    justify-content: space-around;
+
+    width: 200px;
+}
+
+.button-row .item {
+    height: 32px;
+    width: 32px;
+    background-color: var(--ayu-fg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    transition: 300ms ease-out background-color;
+}
+
+.item-link::after {
+    display: none; /* Hide standard link underline for icons */
+}
+
+.item-link:hover .item {
+    background-color: var(--ayu-green);
+}
+
+.github-icon {
+    -webkit-mask-image: url('assets/github.svg');
+    mask-image: url('assets/github.svg');
+}
+
+.linkedin-icon {
+    -webkit-mask-image: url('assets/linkedin.svg');
+    mask-image: url('assets/linkedin.svg');
+}
+
+.leetcode-icon {
+    -webkit-mask-image: url('assets/leetcode.svg');
+    mask-image: url('assets/leetcode.svg');
+}
