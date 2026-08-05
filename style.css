@@ -14,6 +14,9 @@
     font-style: italic;
 }
 
+h3 {
+    font-size: 2rem;
+}
 
 :root {
     /* Base & UI */
@@ -133,7 +136,7 @@ a::after {
     width: 100%;
     transform: scaleX(0);
     height: 1px;
-    bottom: -5px;
+    bottom: 0px;
     left: 0;
     background-color: var(--ayu-green);
     transform-origin: bottom center;
@@ -195,4 +198,157 @@ a:hover::after {
 .leetcode-icon {
     -webkit-mask-image: url('assets/leetcode.svg');
     mask-image: url('assets/leetcode.svg');
+}
+
+/*/////////////////////////////////////////*/
+/* Container to hold the overlapping text */
+.cipher-container {
+  font-family: 'Sentient', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  background: var(--ayu-bg);
+  color: var(--ayu-fg); /* Default text color */
+  
+  /* Using inline-block so it flows well with the text around it */
+  display: inline-block;
+}
+
+.char::before {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+}
+
+/* Base bindings with fallback text */
+.c1::before { content: "N"; animation-name: kf-c1; }
+.c2::before { content: "i"; animation-name: kf-c2; }
+.c3::before { content: "l"; animation-name: kf-c3; }
+.c4::before { content: "e"; animation-name: kf-c4; }
+.c5::before { content: "s"; animation-name: kf-c5; }
+.c6::before { content: "h"; animation-name: kf-c6; }
+.c7::before { content: ""; animation-name: kf-c7; }
+.c8::before { content: ""; animation-name: kf-c8; }
+.c9::before { content: ""; animation-name: kf-c9; }
+
+
+/* 
+  ==========================================
+  CHARACTER KEYFRAMES (Dynamic Colors)
+  ==========================================
+*/
+
+/* Slot 1: N -> t (Red) */
+@keyframes kf-c1 {
+  0%   { content: "N"; color: var(--ayu-fg); }
+  45%  { content: "N"; color: var(--ayu-red); }
+  47%  { content: "N̶"; color: var(--ayu-red); }
+  48%  { content: "𝔱"; color: var(--ayu-red); }
+  50%  { content: "t"; color: var(--ayu-fg); }
+  95%  { content: "⪧"; color: var(--ayu-red); }
+  96%  { content: "N̶"; color: var(--ayu-red); }
+  98%  { content: "N̶"; color: var(--ayu-red); }
+  100% { content: "N"; color: var(--ayu-fg); }
+}
+
+/* Slot 2: i -> h (Orange) */
+@keyframes kf-c2 {
+  0%   { content: "i"; color: var(--ayu-fg); }
+  46%  { content: "i"; color: var(--ayu-orange); }
+  47%  { content: "⑆"; color: var(--ayu-orange); }
+  49%  { content: "▓"; color: var(--ayu-orange); }
+  50%  { content: "h"; color: var(--ayu-fg); }
+  95%  { content: "▓"; color: var(--ayu-orange); }
+  97%  { content: "i"; color: var(--ayu-orange); }
+  99%  { content: "i"; color: var(--ayu-orange); }
+  100% { content: "i"; color: var(--ayu-fg); }
+}
+
+/* Slot 3: l -> e (Yellow) */
+@keyframes kf-c3 {
+  0%   { content: "l"; color: var(--ayu-fg); }
+  47%  { content: "⎈"; color: var(--ayu-yellow); }
+  48%  { content: "1"; color: var(--ayu-yellow); }
+  49%  { content: "𝕖"; color: var(--ayu-yellow); }
+  50%  { content: "e"; color: var(--ayu-fg); }
+  96%  { content: "l"; color: var(--ayu-yellow); }
+  97%  { content: "l"; color: var(--ayu-yellow); }
+  98%  { content: "1"; color: var(--ayu-yellow); }
+  100% { content: "l"; color: var(--ayu-fg); }
+}
+
+/* Slot 4: e -> n (Green) */
+@keyframes kf-c4 {
+  0%   { content: "e"; color: var(--ayu-fg); }
+  48.5%  { content: "₃"; color: var(--ayu-green); }
+  49%  { content: "ǝ"; color: var(--ayu-green); }
+  49.5%  { content: "𝑛"; color: var(--ayu-green); }
+  50%  { content: "n"; color: var(--ayu-fg); }
+  95%  { content: "𝑛"; color: var(--ayu-green); }
+  99.5%  { content: "⦂"; color: var(--ayu-green); }
+  99.9%  { content: "⋈"; color: var(--ayu-green); }
+  100% { content: "e"; color: var(--ayu-fg); }
+}
+
+/* Slot 5: s -> i (Cyan) */
+@keyframes kf-c5 {
+  0%   { content: "s"; color: var(--ayu-fg); }
+  49.4%  { content: "⢎"; color: var(--ayu-cyan); }
+  49.5%  { content: "!"; color: var(--ayu-cyan); }
+  49.8%  { content: "!"; color: var(--ayu-cyan); }
+  50%  { content: "i"; color: var(--ayu-fg); }
+  95%  { content: "!"; color: var(--ayu-cyan); }
+  96%  { content: "1"; color: var(--ayu-cyan); }
+  98%  { content: "$"; color: var(--ayu-cyan); }
+  100% { content: "s"; color: var(--ayu-fg); }
+}
+
+/* Slot 6: h -> l (Blue) */
+@keyframes kf-c6 {
+  0%   { content: "h"; color: var(--ayu-fg); }
+  46%  { content: "▒"; color: var(--ayu-blue); }
+  48%  { content: "◮"; color: var(--ayu-blue); }
+  49%  { content: "⯌"; color: var(--ayu-blue); }
+  50%  { content: "l"; color: var(--ayu-fg); }
+  96%  { content: "⯌"; color: var(--ayu-blue); }
+  97%  { content: "◮"; color: var(--ayu-blue); }
+  99%  { content: "▒"; color: var(--ayu-blue); }
+  100% { content: "h"; color: var(--ayu-fg); }
+}
+
+/* Slot 7: (empty) -> 3 (Purple) */
+@keyframes kf-c7 {
+  0%   { content: ""; color: var(--ayu-fg); } 
+  46%  { content: "㇌"; color: var(--ayu-purple); }
+  47%  { content: "3"; color: var(--ayu-purple); }
+  49%  { content: "3"; color: var(--ayu-purple); }
+  50%  { content: "3"; color: var(--ayu-fg); }
+  75%  { content: "↋"; color: var(--ayu-purple); }
+  98.8%  { content: "_"; color: var(--ayu-purple); }
+  99.5%  { content: "_"; color: var(--ayu-purple); }
+  100% { content: ""; color: var(--ayu-fg); }
+}
+
+/* Slot 8: (empty) -> s (Red) */
+@keyframes kf-c8 {
+  0%   { content: ""; color: var(--ayu-fg); }
+  47%  { content: "$"; color: var(--ayu-red); }
+  48%  { content: "$"; color: var(--ayu-red); }
+  49%  { content: "$"; color: var(--ayu-red); }
+  50%  { content: "s"; color: var(--ayu-fg); }
+  96%  { content: "$"; color: var(--ayu-red); }
+  97%  { content: "$"; color: var(--ayu-red); }
+  99%  { content: "$"; color: var(--ayu-red); }
+  100% { content: ""; color: var(--ayu-fg); }
+}
+
+/* Slot 9: (empty) -> h (Orange) */
+@keyframes kf-c9 {
+  0%   { content: ""; color: var(--ayu-fg); }
+  49%  { content: "h"; color: var(--ayu-orange); }
+  49.5%  { content: "h"; color: var(--ayu-orange); }
+  50%  { content: "h"; color: var(--ayu-fg); }
+  91%  { content: "h"; color: var(--ayu-orange); } 
+  94%  { content: "."; color: var(--ayu-orange); }
+  99.5%  { content: "_"; color: var(--ayu-orange); }
+  100% { content: ""; color: var(--ayu-fg); }
 }
