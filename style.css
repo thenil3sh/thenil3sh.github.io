@@ -412,11 +412,10 @@ a:not(.work-name):not(.foot a):hover::after {
 
 @media (max-width: 480px) {
     .page {
-        padding: 0 20px 48px;
+        padding: 30vh 20px 48px;
     }
 
     .name-block {
-        min-height: 50vh;
         margin-bottom: 40px;
     }
 
